@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Synless_openweathermap</string>
+    <string name="city">City :</string>
+    <string name="country">Country :</string>
+    <string name="weather">Weather :</string>
+    <string name="temperature">Temperature :</string>
+    <string name="windSpeed">Wind speed :</string>
+    <string name="Latitude">Latitude :</string>
+    <string name="Longitude">Longitude :</string>
+    <string name="Favorite">★ -</string>
+    <string name="addFavorite">★ - Add to favorites</string>
+    <string name="GPS">⊕ - Get weather from current location</string>
+</resources>

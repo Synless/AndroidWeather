@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_weather_app"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingBottom="20dp"
+android:paddingLeft="20dp"
+android:paddingRight="20dp"
+android:paddingTop="20dp"
+tools:context="com.example.synless.openweathermap.weather_app">
+
+<LinearLayout android:id="@+id/linear1" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView   android:text="@string/Favorite"  android:textSize="50px"     android:layout_width="wrap_content" android:layout_height="fill_parent" android:id="@+id/_textViewFavorite"    android:layout_margin="15px" />
+    <Spinner    android:layout_width="match_parent" android:layout_height="fill_parent" android:id="@+id/spinner" android:minHeight="20px"/>
+</LinearLayout>
+
+<LinearLayout android:id="@+id/linear2" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/linear1" android:layout_marginTop="100px">
+    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="textPersonName" android:text="Strasbourg" android:ems="10" android:id="@+id/editTextCity" android:textSize="60px" android:layout_marginLeft="20dp"/>
+    <CheckBox android:text=" Mail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/checkBoxMail" android:checked="false"  android:layout_marginLeft="19dp" android:layout_marginStart="19dp" android:textSize="40px"/>
+</LinearLayout>
+
+<LinearLayout android:id="@+id/linear3" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="50dp" android:layout_below="@+id/linear2" >
+    <LinearLayout android:orientation="vertical" android:layout_weight="0.35" android:layout_width="0dp" android:layout_height="wrap_content" android:id="@+id/verticalLayout1" >
+        <TextView android:text="@string/city"       android:textSize="50px"     android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/_textViewCity"         android:layout_margin="15px" />
+        <TextView android:text="@string/country"    android:textSize="50px"     android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/_textViewCountry"      android:layout_margin="15px" />
+        <TextView android:text="@string/weather"    android:textSize="50px"     android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/_textViewWeather"      android:layout_margin="15px" />
+        <TextView android:text="@string/temperature" android:textSize="50px"    android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/_textViewTemperature"  android:layout_margin="15px" />
+        <TextView android:text="@string/windSpeed"  android:textSize="50px"     android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/_textViewWindSpeed"    android:layout_margin="15px" />
+        <TextView android:text="@string/Latitude"   android:textSize="50px"     android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/_textViewLatitude"     android:layout_margin="15px" />
+        <TextView android:text="@string/Longitude"  android:textSize="50px"     android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/_textViewLongitude"    android:layout_margin="15px" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/verticalLayout2"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <TextView android:text="-" android:textSize="50px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/textViewCity"          android:layout_margin="15px"/>
+        <TextView android:text="-" android:textSize="50px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/textViewCountry"       android:layout_margin="15px"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/imageViewIcon" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <TextView android:text="-" android:textSize="50px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/textViewWeather"       android:layout_margin="15px"/>
+        </LinearLayout>
+        <TextView android:text="-" android:textSize="50px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/textViewTemperature"   android:layout_margin="15px"/>
+        <TextView android:text="-" android:textSize="50px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/textViewWindSpeed"     android:layout_margin="15px"/>
+        <TextView android:text="-" android:textSize="50px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/textViewLatitude"      android:layout_margin="15px"/>
+        <TextView android:text="-" android:textSize="50px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/textViewLongitude"     android:layout_margin="15px"/>
+    </LinearLayout>
+</LinearLayout>
+
+<LinearLayout android:layout_weight=".20" android:id="@+id/linear4" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" >
+    <Button android:text="Météo à Strasbourg"                          android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15px" android:id="@+id/btnGetWeather"    android:onClick="btnGetWeather_clicked"     android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"           android:layout_alignParentStart="true" />
+    <Button android:text="@string/GPS"    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10px" android:id="@+id/btnGetWeatherGPS" android:onClick="btnGetWeatherGPS_clicked"  android:layout_alignParentBottom="true" android:layout_toRightOf="@+id/btnGetWeather"    />
+    <Button android:text="@string/addFavorite"           android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15px" android:id="@+id/btnFav"           android:onClick="btnAddFav_clicked"         android:layout_alignParentBottom="true" android:layout_alignParentRight="true"          android:layout_alignParentEnd="true" />
+</LinearLayout>
+</RelativeLayout>

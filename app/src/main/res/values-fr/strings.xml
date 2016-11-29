@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Synless_openweathermap</string>
+    <string name="city">Ville :</string>
+    <string name="country">Pays :</string>
+    <string name="weather">Météo :</string>
+    <string name="temperature">Temperature :</string>
+    <string name="windSpeed">Vitesse du vent :</string>
+    <string name="Latitude">Latitude :</string>
+    <string name="Longitude">Longitude :</string>
+    <string name="Favorite">★ -</string>
+    <string name="addFavorite">★ - Ajouter aux favoris</string>
+    <string name="GPS">⊕ - Météo à la position actuelle</string>
+</resources>
